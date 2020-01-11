@@ -8,13 +8,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 import { rhythm } from "../utils/typography"
 
-const Bio = () => {
+const Bio = ({ intl }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/me.jpg/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
@@ -54,15 +55,16 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
+        {intl.formatMessage({ id: 'bio-message' }, { author, strong: str => <b>{str}</b>})}
+        {/* Written by <strong>{author}</strong> who lives and works in San
         Francisco building useful things.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter
-        </a>
+        </a> */}
       </p>
     </div>
   )
 }
 
-export default Bio
+export default injectIntl(Bio)

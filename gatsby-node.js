@@ -19,6 +19,8 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                description
+                lang
               }
             }
           }

@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Mon coin sur les internets`,
+    author: `André Aubin`,
+    description: `Mon coin sur les internets`,
+    siteUrl: `https://andral.kiwi/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `lambda_2`,
     },
   },
   plugins: [
@@ -38,6 +38,24 @@ module.exports = {
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
+          },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              usePrefix: true,
+              providers: {
+                include: [
+                  'Twitter',
+                  'Instagram',
+                ],
+                settings: {
+                  // Ex. Show all Twitter embeds with the dark theme
+                  Twitter: { theme: 'light' },
+                  // Ex. Hide all Instagram comments by default
+                  Instagram: { hidecaption: true },
+                },
+              },
+            }
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -73,8 +91,22 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`fr`, `en`],
+        // language file path
+        defaultLanguage: `fr`,
+        // option to redirect to `/ko` when connecting `/`
+        redirect: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-twitter`
   ],
 }

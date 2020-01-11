@@ -1,17 +1,76 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import oceanBeachTheme from 'typography-theme-ocean-beach'
 
-Wordpress2016.overrideThemeStyles = () => {
+oceanBeachTheme.headerFontFamily = ['Poppins']
+oceanBeachTheme.bodyFontFamily = ['Inconsolata']
+oceanBeachTheme.headerColor = '#06425a'
+oceanBeachTheme.bodyColor = '#0f5b7a'
+oceanBeachTheme.googleFonts = [
+  {
+    name: 'Poppins',
+    styles: [
+      '700',
+    ],
+  },
+  {
+    name: 'Inconsolata',
+    styles: [
+      '400',
+      '400i',
+      '700',
+      '700i',
+    ],
+  },
+]
+oceanBeachTheme.overrideThemeStyles = ({ rhythm }, options, styles) => {
+  // const linkColor = "#f26a3d"
+  const linkColor = "#EF6461"
+  const blockQuoteColor = "#E4B363"
   return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
+    a: {
+      color: linkColor,
+      textDecoration: "none",
+      textShadow:
+        ".03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff", // eslint-disable-line
+      backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, ${linkColor} 1px, ${linkColor} 2px, rgba(0, 0, 0, 0) 2px)`, // eslint-disable-line
     },
+    blockquote: {
+      borderLeft: `${rhythm(6 / 16)} solid ${blockQuoteColor}`,
+    },
+
   }
 }
 
-delete Wordpress2016.googleFonts
+// oceanBeachTheme.overrideThemeStyles = ({ rhythm }, options) => ({
+//   'h2,h3': {
+//     marginBottom: rhythm(1 / 2),
+//     marginTop: rhythm(2),
+//   },
+//   headerFontFamily: 'Poppins',
+//   bodyFontFamily: 'Inconsolata',
+//   googleFonts: [
+//     {
+//       name: 'Poppins',
+//       styles: [
+//         '700',
+//       ],
+//     },
+//     {
+//       name: 'Inconsolata',
+//       styles: [
+//         '400',
+//         '400i',
+//         '700',
+//         '700i',
+//       ],
+//     },
+//   ],
 
-const typography = new Typography(Wordpress2016)
+// })
+
+// delete oceanBeachTheme.googleFonts
+
+const typography = new Typography(oceanBeachTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

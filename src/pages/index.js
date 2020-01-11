@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -8,14 +9,17 @@ import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, intl } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-
+    const posts = data.allMarkdownRemark.edges.filter(({ node }) => node.frontmatter.lang === intl.locale)
+    console.log({ lang: intl });
+    console.log({ posts });
+    console.log({ edges: data.allMarkdownRemark.edges });
+    
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+        {/* <Bio /> */}
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -47,7 +51,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default injectIntl(BlogIndex)
 
 export const pageQuery = graphql`
   query {
@@ -66,6 +70,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            lang
             description
           }
         }

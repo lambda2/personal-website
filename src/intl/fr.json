@@ -6,5 +6,6 @@
   "bio-message": "Écrit par <strong>{author}</strong>",
   "description": "Mon coin sur les internets",
   "no-posts": "Aucun article",
-  "who-am-i": "Qui suis-je ?"
+  "who-am-i": "Qui suis-je ?",
+  "cc": "tout à vous (<a>Creative Commons CC0</a>)"
 }

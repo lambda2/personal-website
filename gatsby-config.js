@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Mon coin sur les internets`,
+    title: `Andre's blog`,
     author: `André Aubin`,
-    description: `Mon coin sur les internets`,
+    description: `Making stuff with internet, plants, API's and people`,
     siteUrl: `https://andral.kiwi/`,
     social: {
       twitter: `lambda_2`,
@@ -46,13 +46,10 @@ module.exports = {
               providers: {
                 include: [
                   'Twitter',
-                  'Instagram',
                 ],
                 settings: {
                   // Ex. Show all Twitter embeds with the dark theme
                   Twitter: { theme: 'light' },
-                  // Ex. Hide all Instagram comments by default
-                  Instagram: { hidecaption: true },
                 },
               },
             }
@@ -75,11 +72,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `André's blog`,
+        short_name: `André blog`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#EF6461`,
         display: `minimal-ui`,
         icon: `content/assets/logo.png`,
       },

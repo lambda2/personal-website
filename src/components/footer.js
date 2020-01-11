@@ -1,12 +1,13 @@
 import React from "react"
 import { rhythm } from "../utils/typography"
-import { faKeybase, faGithub, faTwitter } from './icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { injectIntl, Link, changeLocale } from "gatsby-plugin-intl"
+import { faKeybase, faGithub, faTwitter } from './icons'
 
-const Footer = () => {
+const Footer = ({ intl }) => {
 
   const navStyle = {
-    marginTop: rhythm(1.5),
+    marginTop: rhythm(2),
     display: 'flex',
     justifyContent: 'space-between'
   }
@@ -14,7 +15,8 @@ const Footer = () => {
   const aProps = {
     style: {
       margin: rhythm(.3),
-      color: '#3c7891',
+      fontSize: rhythm(.5),
+      color: '#88acbb',
       textShadow: 'none',
       background: 'none',
       textDecoration: 'none',
@@ -23,8 +25,18 @@ const Footer = () => {
     rel: "noopener noreferrer"
   }
 
+  const asideProps = {
+    style: {
+      color: '#88acbb',
+      fontSize: rhythm(.5)
+    }
+  }
+
   return (<footer style={navStyle}>
-    <aside>© {new Date().getFullYear()}, andral.kiwi</aside>
+    <aside {...asideProps}>
+      {new Date().getFullYear()}, André Aubin - {' '}
+      {intl.formatMessage({ id: 'cc' }, { a: (text) => <a href="https://creativecommons.org/publicdomain/zero/1.0/">{text}</a>})}
+    </aside>
     <nav>
       <a {...aProps} href="https://keybase.io/lambda2">
         <FontAwesomeIcon icon={faKeybase} />
@@ -39,4 +51,4 @@ const Footer = () => {
   </footer>)
 }
 
-export default Footer
+export default injectIntl(Footer)

@@ -3,7 +3,7 @@ import { injectIntl } from "gatsby-plugin-intl"
 
 import { rhythm } from "../utils/typography"
 import Header from "./header"
-import Footer from "./Footer"
+import Footer from "./footer"
 
 class Layout extends React.Component {
   render() {

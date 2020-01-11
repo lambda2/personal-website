@@ -1,69 +1,14 @@
 import React from "react"
-// import { Link } from "gatsby"
-import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl } from "gatsby-plugin-intl"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import Header from "./header"
 import Footer from "./Footer"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children, intl } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    const { children } = this.props
 
-    // if (location.pathname === rootPath) {
-    //   header = (
-    //     <h1
-    //       style={{
-    //         ...scale(1.5),
-    //         marginBottom: rhythm(1.5),
-    //         marginTop: 0,
-    //       }}
-    //     >
-    //       <Link
-    //         style={{
-    //           boxShadow: `none`,
-    //           textDecoration: `none`,
-    //           color: `inherit`,
-    //         }}
-    //         to={`/`}
-    //       >
-    //         {title}
-    //       </Link>
-    //       <Link
-    //         style={{
-    //           boxShadow: `none`,
-    //           textDecoration: `none`,
-    //           color: `inherit`,
-    //         }}
-    //         to={`/about`}
-    //       >
-    //         {intl.formatMessage({id: 'about'})}
-    //       </Link>
-    //     </h1>
-    //   )
-    // } else {
-    //   header = (
-    //     <h3
-    //       style={{
-    //         fontFamily: `Poppins, Montserrat, sans-serif`,
-    //         marginTop: 0,
-    //       }}
-    //     >
-    //       <Link
-    //         style={{
-    //           boxShadow: `none`,
-    //           textDecoration: `none`,
-    //           color: `inherit`,
-    //         }}
-    //         to={`/`}
-    //       >
-    //         {title}
-    //       </Link>
-    //     </h3>
-    //   )
-    // }
     return (
       <div
         style={{
@@ -75,11 +20,6 @@ class Layout extends React.Component {
       >
         <header><Header /></header>
         <main>{children}</main>
-        {/* <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer> */}
         <Footer />
       </div>
     )

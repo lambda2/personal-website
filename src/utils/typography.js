@@ -41,35 +41,6 @@ oceanBeachTheme.overrideThemeStyles = ({ rhythm }, options, styles) => {
   }
 }
 
-// oceanBeachTheme.overrideThemeStyles = ({ rhythm }, options) => ({
-//   'h2,h3': {
-//     marginBottom: rhythm(1 / 2),
-//     marginTop: rhythm(2),
-//   },
-//   headerFontFamily: 'Poppins',
-//   bodyFontFamily: 'Inconsolata',
-//   googleFonts: [
-//     {
-//       name: 'Poppins',
-//       styles: [
-//         '700',
-//       ],
-//     },
-//     {
-//       name: 'Inconsolata',
-//       styles: [
-//         '400',
-//         '400i',
-//         '700',
-//         '700i',
-//       ],
-//     },
-//   ],
-
-// })
-
-// delete oceanBeachTheme.googleFonts
-
 const typography = new Typography(oceanBeachTheme)
 
 // Hot reload typography in development.

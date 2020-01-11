@@ -33,7 +33,7 @@ const Bio = ({ intl }) => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   return (
     <div
       style={{
@@ -56,12 +56,6 @@ const Bio = ({ intl }) => {
       />
       <p>
         {intl.formatMessage({ id: 'bio-message' }, { author, strong: str => <Link to={`/about`}><b>{str}</b></Link> })}{` `}
-        {/* Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
-        {` `} */}
-        {/* <Link to={`/about`}>
-          {intl.formatMessage({ id: 'who-am-i' })}
-        </Link> */}
       </p>
     </div>
   )

@@ -11,24 +11,28 @@ const Footer = () => {
     justifyContent: 'space-between'
   }
 
-  const aStyle = {
-    margin: rhythm(.3),
-    color: '#3c7891',
-    textShadow: 'none',
-    background: 'none',
-    textDecoration: 'none',
+  const aProps = {
+    style: {
+      margin: rhythm(.3),
+      color: '#3c7891',
+      textShadow: 'none',
+      background: 'none',
+      textDecoration: 'none',
+    },
+    target: "_blank",
+    rel: "noopener noreferrer"
   }
 
   return (<footer style={navStyle}>
     <aside>© {new Date().getFullYear()}, andral.kiwi</aside>
     <nav>
-      <a style={aStyle} target="_blank" href="https://keybase.io/lambda2">
+      <a {...aProps} href="https://keybase.io/lambda2">
         <FontAwesomeIcon icon={faKeybase} />
       </a>
-      <a style={aStyle} target="_blank" href="https://github.com/lambda2">
+      <a {...aProps} href="https://github.com/lambda2">
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a style={aStyle} target="_blank" href="https://twitter.com/lambda_2">
+      <a {...aProps} href="https://twitter.com/lambda_2">
         <FontAwesomeIcon icon={faTwitter} />
       </a>
     </nav>

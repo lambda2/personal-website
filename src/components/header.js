@@ -7,11 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Header extends React.Component {
   render() {
-    const { location, title, children, intl } = this.props
-    console.log({intl});
-    console.log({ formatted: intl.formatMessage({ id: 'about' })});
+    const { intl } = this.props
+
     const onChangeLocale = () => {
-      changeLocale(intl.locale == 'fr' ? 'en' : 'fr')
+      changeLocale(intl.locale === 'fr' ? 'en' : 'fr')
     }
 
     const navStyle = {
@@ -48,9 +47,10 @@ class Header extends React.Component {
           <FontAwesomeIcon icon={faPortrait} />{' '}
           {intl.formatMessage({ id: 'about' })}
         </Link>
-        <a
-          style={{marginLeft: 'auto', ...linkStyle}}
-          onClick={onChangeLocale}
+        <a // eslint-disable-line
+          style={{ marginLeft: 'auto', ...linkStyle }} // eslint-disable-line
+          onClick={onChangeLocale} // eslint-disable-line
+          href="#" // eslint-disable-line
         >
           <FontAwesomeIcon icon={faFlag} />{' '}
           {intl.formatMessage({ id: 'change-locale' })}

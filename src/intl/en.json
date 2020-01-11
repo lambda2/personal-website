@@ -2,8 +2,9 @@
   "title": "My space on the internets",
   "about": "About",
   "bio-message": "Written by <strong>{author}</strong>",
-  "change-locale": "Francais",
+  "change-locale": "Passer en Francais",
   "home": "Home",
   "description": "My space on the internets",
-  "no-posts": "No articles yet"
+  "no-posts": "No articles yet",
+  "who-am-i": "Who am I ?"
 }

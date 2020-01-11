@@ -25,6 +25,7 @@ class Header extends React.Component {
       paddingTop: rhythm(.5),
       marginRight: rhythm(1),
       textDecoration: `none`,
+      cursor: 'pointer',
       textAlign: 'center',
       color: `inherit`,
     }
@@ -48,7 +49,7 @@ class Header extends React.Component {
           {intl.formatMessage({ id: 'about' })}
         </Link>
         <a
-          style={linkStyle}
+          style={{marginLeft: 'auto', ...linkStyle}}
           onClick={onChangeLocale}
         >
           <FontAwesomeIcon icon={faFlag} />{' '}

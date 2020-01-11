@@ -2,8 +2,9 @@
   "title": "Mon coin sur les internets",
   "about": "À propos",
   "home": "Maison",
-  "change-locale": "English",
+  "change-locale": "Switch to English",
   "bio-message": "Écrit par <strong>{author}</strong>",
   "description": "Mon coin sur les internets",
-  "no-posts": "Aucun article"
+  "no-posts": "Aucun article",
+  "who-am-i": "Qui suis-je ?"
 }

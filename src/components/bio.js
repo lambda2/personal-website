@@ -8,7 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, Link } from "gatsby-plugin-intl"
 
 import { rhythm } from "../utils/typography"
 
@@ -55,13 +55,13 @@ const Bio = ({ intl }) => {
         }}
       />
       <p>
-        {intl.formatMessage({ id: 'bio-message' }, { author, strong: str => <b>{str}</b>})}
+        {intl.formatMessage({ id: 'bio-message' }, { author, strong: str => <Link to={`/about`}><b>{str}</b></Link> })}{` `}
         {/* Written by <strong>{author}</strong> who lives and works in San
         Francisco building useful things.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a> */}
+        {` `} */}
+        {/* <Link to={`/about`}>
+          {intl.formatMessage({ id: 'who-am-i' })}
+        </Link> */}
       </p>
     </div>
   )

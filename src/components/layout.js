@@ -4,6 +4,7 @@ import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 import { rhythm, scale } from "../utils/typography"
 import Header from "./header"
+import Footer from "./Footer"
 
 class Layout extends React.Component {
   render() {
@@ -79,9 +80,7 @@ class Layout extends React.Component {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer> */}
-        <footer>
-          © {new Date().getFullYear()}, andral.kiwi
-        </footer>
+        <Footer />
       </div>
     )
   }

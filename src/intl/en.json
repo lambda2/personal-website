@@ -1,11 +1,11 @@
 {
-  "title": "My space on the internets",
+  "title": "André Aubin",
   "about": "About",
   "bio-message": "Written by <strong>{author}</strong>",
   "change-locale": "Passer en Francais",
   "home": "Home",
-  "description": "My space on the internets",
+  "description": "Making stuff with internet, plants, API's and people",
   "no-posts": "No articles yet",
   "who-am-i": "Who am I ?",
-  "cc": "all yours under <a>Creative Commons CC0</a>"
+  "cc": "<a>No copyright</a>"
 }

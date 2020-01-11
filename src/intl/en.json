@@ -4,5 +4,6 @@
   "bio-message": "Written by <strong>{author}</strong>",
   "change-locale": "Francais",
   "home": "Home",
-  "description": "My space on the internets"
+  "description": "My space on the internets",
+  "no-posts": "No articles yet"
 }

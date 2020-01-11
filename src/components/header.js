@@ -1,8 +1,9 @@
 import React from "react"
-// import { Link } from "gatsby"
 import { injectIntl, Link, changeLocale } from "gatsby-plugin-intl"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+import { faToriiGate, faPortrait, faFlag } from './icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Header extends React.Component {
   render() {
@@ -18,17 +19,16 @@ class Header extends React.Component {
       marginTop: 0,
       display: 'flex',
     }
+
     const linkStyle = {
       boxShadow: `none`,
       paddingTop: rhythm(.5),
-      // paddingBottom: rhythm(.5),
-      // paddingLeft: 0,
-      // paddingRight: rhythm(1),
       marginRight: rhythm(1),
       textDecoration: `none`,
       textAlign: 'center',
       color: `inherit`,
     }
+
     return (
       <nav
         style={navStyle}
@@ -37,18 +37,21 @@ class Header extends React.Component {
           style={linkStyle}
           to={`/`}
         >
+          <FontAwesomeIcon icon={faToriiGate} />{' '}
           {intl.formatMessage({ id: 'home' })}
         </Link>
         <Link
           style={linkStyle}
           to={`/about`}
         >
+          <FontAwesomeIcon icon={faPortrait} />{' '}
           {intl.formatMessage({ id: 'about' })}
         </Link>
         <a
           style={linkStyle}
           onClick={onChangeLocale}
         >
+          <FontAwesomeIcon icon={faFlag} />{' '}
           {intl.formatMessage({ id: 'change-locale' })}
         </a>
       </nav>

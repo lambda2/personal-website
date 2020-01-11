@@ -1,33 +1,19 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+import { graphql } from "gatsby"
+import { injectIntl } from "gatsby-plugin-intl"
 import Image from "gatsby-image"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
+import BioContent from "../components/about"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 class BlogAbout extends React.Component {
   render() {
 
-    const { data, intl } = this.props
-    const { author, social } = data.site.siteMetadata
+    const { data } = this.props
+    const { author } = data.site.siteMetadata
     const siteTitle = data.site.siteMetadata.title
-    const logoStyle = {
-      display: 'inline-block',
-      height: '16px',
-      width: '16px',
-      lineHeight: 0,
-      margin: 0,
-    }
-    const linkStyle = {
-      marginLeft: '2px'
-    }
-    const posts = data.allMarkdownRemark.edges.filter(({ node }) => node.frontmatter.lang === intl.locale)
-    console.log({ lang: intl });
-    console.log({ posts });
-    console.log({ edges: data.allMarkdownRemark.edges });
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -54,16 +40,7 @@ class BlogAbout extends React.Component {
               borderRadius: `5px`,
             }}
           />
-          <content
-            style={{
-              paddingLeft: rhythm(1),
-              flex: '1 0 250px',
-            }}
-          >
-            <p>Hey, I'm André Aubin. ex-developper@<a style={linkStyle} href="https://42.fr">42</a>. CTO@<a style={linkStyle} href="https://pandascore.co">PandaScore</a>.</p>
-
-            <p>You can reach me on <img style={logoStyle} src="https://keybase.io/images/icons/icon-keybase-logo-48@2x.png" alt="keybase logo" /> <a href="https://keybase.io/lambda2">Keybase</a>, get my <a href="https://keybase.io/lambda2/pgp_keys.asc">PGP key</a> or see my work on <img style={logoStyle} src="https://github.githubassets.com/pinned-octocat.svg" alt="github-logo" /> <a href="https://github.com/lambda2">Github</a>.</p>
-          </content>
+          <BioContent />
         </div>
       </Layout>
     )

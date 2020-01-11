@@ -4,5 +4,6 @@
   "home": "Maison",
   "change-locale": "English",
   "bio-message": "Écrit par <strong>{author}</strong>",
-  "description": "Mon coin sur les internets"
+  "description": "Mon coin sur les internets",
+  "no-posts": "Aucun article"
 }

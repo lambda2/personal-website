@@ -3,7 +3,7 @@ module.exports = {
     title: `Andre's blog`,
     author: `André Aubin`,
     description: `Making stuff with internet, plants, API's and people`,
-    siteUrl: `https://andral.kiwi/`,
+    siteUrl: `https://andral.xyz/`,
     social: {
       twitter: `lambda_2`,
     },

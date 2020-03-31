@@ -1,6 +1,6 @@
 # Website 
 
-![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png) ![GitHub last commit](https://img.shields.io/github/last-commit/lambda2/personal-website)
+![GitHub](https://img.shields.io/github/license/lambda2/personal-website) ![GitHub last commit](https://img.shields.io/github/last-commit/lambda2/personal-website) ![Built with Gatsby](https://img.shields.io/badge/Built%20with-Gatsby-blueviolet)
 
 This is my [personal website](https://andral.xyz) source code.
 

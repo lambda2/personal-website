@@ -15,16 +15,13 @@ const BioContent = ({ intl, image }) => {
     & > content {
       padding-left: ${rhythm(1)};
       flex: 1 0 250px;
-      
     }
 
     ${MOBILE_MEDIA_QUERY} {
-
       & > content {
         padding-left: 0;
         flex: 1 0 100%;
       }
-
     }
   `
 

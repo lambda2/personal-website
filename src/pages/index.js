@@ -4,6 +4,8 @@ import { injectIntl, Link } from "gatsby-plugin-intl"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import About from "../components/about"
+
 import { rhythm } from "../utils/typography"
 
 import { faEmptySet } from '../components/icons'
@@ -17,8 +19,8 @@ class BlogIndex extends React.Component {
     
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-
+        <SEO title={intl.formatMessage({ id: 'home' })} />
+        <About />
         {posts.length === 0 && <p>
           <FontAwesomeIcon icon={faEmptySet} />{' '}
           {intl.formatMessage({id: 'no-posts'})}

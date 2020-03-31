@@ -4,14 +4,14 @@ import { injectIntl } from "gatsby-plugin-intl"
 import Image from "gatsby-image"
 
 import Layout from "../components/layout"
-import BioContent from "../components/about"
+import About from "../components/about"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 class BlogAbout extends React.Component {
   render() {
 
-    const { data } = this.props
+    const { data, intl } = this.props
     const { author } = data.site.siteMetadata
     const siteTitle = data.site.siteMetadata.title
 
@@ -32,16 +32,17 @@ class BlogAbout extends React.Component {
             style={{
               margin: 'auto',
               marginBottom: rhythm(1),
-              minWidth: 250,
-              flex: '0 0 250px',
+              minWidth: '15vh',
+              maxHeight: '15vh',
+              flex: '0 0 150px',
               borderRadius: `5px`,
             }}
             imgStyle={{
               borderRadius: `5px`,
             }}
           />
-          <BioContent />
         </div>
+        <About />
       </Layout>
     )
   }

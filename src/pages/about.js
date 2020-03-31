@@ -7,12 +7,11 @@ import Layout from "../components/layout"
 import About from "../components/about"
 import Timeline from "../components/timeline"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 class BlogAbout extends React.Component {
   render() {
 
-    const { data, intl } = this.props
+    const { data } = this.props
     const { author } = data.site.siteMetadata
     const siteTitle = data.site.siteMetadata.title
 

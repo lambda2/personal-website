@@ -22,15 +22,6 @@ const AvatarImage = styled(Image)`
   }
 
 `
-  
-const baseStyle = {
-  margin: `auto 10px ${rhythm(1)}`,
-  maxWidth: '15vh',
-  maxHeight: '15vh',
-  flex: '0 0 170px',
-  borderRadius: `5px`,
-  display: 'flex',
-}
 
 export const Avatar = ({ style, ...props }) => <AvatarImage
   {...props}

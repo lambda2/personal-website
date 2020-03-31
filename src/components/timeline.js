@@ -4,7 +4,7 @@ import typography, { rhythm } from "../utils/typography"
 import TrefleLogo from "../assets/logos/trefle.svg"
 import MashuLogo from "../assets/logos/mashu.svg"
 import SpireLogo from "../assets/logos/spire.svg"
-import { faMapMarkerAlt, faExternalLinkAlt, faCodeBranch, faCompactDisc, faPauseCircle } from './icons'
+import { faMapMarkerAlt, faExternalLinkAlt, faCompactDisc, faPauseCircle } from './icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 import { injectIntl } from "gatsby-plugin-intl"
@@ -174,7 +174,7 @@ const Timeline = ({ intl }) => {
       <ProjectItem>
         <ProjectTitle>
           <h2 style={{ fontFamily: 'Inconsolata', color: '#318810' }}>
-            <img src={TrefleLogo} style={{height: '16px'}} />
+            <img alt="logo" src={TrefleLogo} style={{height: '16px'}} />
             {' '}
             Trefle
           </h2>
@@ -192,7 +192,7 @@ const Timeline = ({ intl }) => {
       <ProjectItem>
         <ProjectTitle>
           <h2 style={{ fontFamily: 'Inconsolata', color: '#ef4565', position: 'relative' }}>
-            <img src={MashuLogo} style={{height: '20px', position: 'relative', top: '3px'}} />
+            <img alt="logo" src={MashuLogo} style={{height: '20px', position: 'relative', top: '3px'}} />
             {' '}
             Mashu
           </h2>
@@ -210,7 +210,7 @@ const Timeline = ({ intl }) => {
       <ProjectItem>
         <ProjectTitle>
           <h2 style={{ fontFamily: 'Inconsolata', color: '#a02110', position: 'relative' }}>
-            <img src={SpireLogo} style={{height: '18px', position: 'relative'}} />
+            <img alt="logo" src={SpireLogo} style={{height: '18px', position: 'relative'}} />
             {' '}
             Spire
           </h2>

@@ -5,11 +5,6 @@ const linkAttr = {
   rel: "noopener noreferrer"
 }
 
-const hLinkAttr = {
-  style: { marginLeft: '2px' },
-  ...linkAttr
-}
-
 export const ExternalLink = ({children, ...props}) => <a {...linkAttr} {...props}>
   {children}
 </a>

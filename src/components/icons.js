@@ -4,6 +4,11 @@ import {
   faToriiGate,
   faPortrait,
   faFlag,
+  faMapMarkerAlt,
+  faExternalLinkAlt,
+  faCodeBranch,
+  faCompactDisc,
+  faPauseCircle,
   faEmptySet
 } from '@fortawesome/pro-duotone-svg-icons'
 
@@ -20,6 +25,11 @@ library.add(
   faKeybase,
   faGithub,
   faTwitter,
+  faCompactDisc,
+  faPauseCircle,
+  faCodeBranch,
+  faMapMarkerAlt,
+  faExternalLinkAlt,
   faEmptySet
 )
 
@@ -30,5 +40,10 @@ export {
   faKeybase,
   faGithub,
   faTwitter,
+  faCompactDisc,
+  faPauseCircle,
+  faCodeBranch,
+  faMapMarkerAlt,
+  faExternalLinkAlt,
   faEmptySet
 }

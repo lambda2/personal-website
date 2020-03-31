@@ -1,7 +1,7 @@
 import React from "react"
 import { rhythm } from "../utils/typography"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { injectIntl, Link, changeLocale } from "gatsby-plugin-intl"
+import { injectIntl } from "gatsby-plugin-intl"
 import { faKeybase, faGithub, faTwitter } from './icons'
 
 const Footer = ({ intl }) => {

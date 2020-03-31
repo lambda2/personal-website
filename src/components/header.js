@@ -4,6 +4,8 @@ import { injectIntl, Link, changeLocale } from "gatsby-plugin-intl"
 import { rhythm } from "../utils/typography"
 import { faToriiGate, faPortrait, faFlag } from './icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
+import styled from "styled-components"
 
 class Header extends React.Component {
   render() {
@@ -13,49 +15,61 @@ class Header extends React.Component {
       changeLocale(intl.locale === 'fr' ? 'en' : 'fr')
     }
 
-    const navStyle = {
-      marginBottom: rhythm(1.5),
-      marginTop: 0,
-      display: 'flex',
-    }
+    const Nav = styled.nav`
+      margin-bottom: ${rhythm(1.5)};
+      margin-top: 0;
+      display: flex;
+    `
 
-    const linkStyle = {
-      boxShadow: `none`,
-      paddingTop: rhythm(.5),
-      marginRight: rhythm(1),
-      textDecoration: `none`,
-      cursor: 'pointer',
-      textAlign: 'center',
-      color: `inherit`,
-    }
+    const NavButton = styled.a`
+      margin-left: auto;
+      box-shadow: none;
+      padding-top: ${rhythm(.5)};
+      margin-right: ${rhythm(1)};
+      margin-left: auto;
+      text-decoration: none;
+      cursor: pointer;
+      text-align: center;
+      color: inherit;
+
+      ${MOBILE_MEDIA_QUERY} {
+        & > span {
+          display: none;
+        }
+      }
+    `
+
+    const NavLink = styled(Link)`
+      margin-left: auto;
+      box-shadow: none;
+      padding-top: ${rhythm(.5)};
+      margin-right: ${rhythm(1)};
+      text-decoration: none;
+      cursor: pointer;
+      text-align: center;
+      color: inherit;
+    `
 
     return (
-      <nav
-        style={navStyle}
-      >
-        <Link
-          style={linkStyle}
+      <Nav>
+        <NavLink
           to={`/`}
         >
           <FontAwesomeIcon icon={faToriiGate} />{' '}
           {intl.formatMessage({ id: 'home' })}
-        </Link>
-        <Link
-          style={linkStyle}
+        </NavLink>
+        <NavLink
           to={`/about`}
         >
           <FontAwesomeIcon icon={faPortrait} />{' '}
           {intl.formatMessage({ id: 'about' })}
-        </Link>
-        <a // eslint-disable-line
-          style={{ marginLeft: 'auto', ...linkStyle }} // eslint-disable-line
-          onClick={onChangeLocale} // eslint-disable-line
-          href="#" // eslint-disable-line
+        </NavLink>
+        <NavButton onClick={onChangeLocale} href="#"  // eslint-disable-line 
         >
           <FontAwesomeIcon icon={faFlag} />{' '}
-          {intl.formatMessage({ id: 'change-locale' })}
-        </a>
-      </nav>
+          {intl.formatMessage({ id: 'change-locale' }, {hide: t => <span>{t}</span>})}
+        </NavButton>
+      </Nav>
     )
   }
 }

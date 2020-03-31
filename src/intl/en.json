@@ -2,10 +2,45 @@
   "title": "André Aubin",
   "about": "About",
   "bio-message": "Written by <strong>{author}</strong>",
-  "change-locale": "Passer en Francais",
+  "change-locale": "<hide>Passer en </hide>Fr<hide>ancais</hide>",
   "home": "Home",
   "description": "Making stuff with internet, plants, API's and people",
   "no-posts": "No articles yet",
   "who-am-i": "Who am I ?",
-  "cc": "<a>No copyright</a>"
+  "cc": "<a>No copyright</a>",
+  "in-progress": "In progress",
+  "in-pause": "Paused",
+
+  "about-me": {
+    "headline": "Hello, I'm André Aubin.",
+    "function": "I'm a developer (mostly web), and I'm currently \"working\" for myself.",
+    "hobbies": "I spend a lot of time <a>building small projects</a> that can be useful to somebody. If you have any questions, ideas or just want to talk, write me on <b>Twitter</b>"
+  },
+
+  "experiences": {
+    "title": "Latest experiences",
+    "panda": {
+      "title": "CTO & Developer",
+      "desc": "Software development & technical team management."
+    },
+    "42": {
+      "title": "Fullstack Developer",
+      "desc": "Conception & development of the school's <a>intranet</a> and <b>API</b>"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "trefle": {
+      "title": "The plants API",
+      "desc": "To build apps, website and statistics around botanical data."
+    },
+    "mashu": {
+      "title": "A cultural video platform",
+      "desc": "Provider-free, where each video learns us something."
+    },
+    "spire": {
+      "title": "A news feed",
+      "desc": "Collected, filtered and grouped automatically, to have a little overview of what's happening."
+    }
+  }
 }

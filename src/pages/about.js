@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { injectIntl } from "gatsby-plugin-intl"
-import Image from "gatsby-image"
+import { Avatar } from "../elements/avatar"
 
 import Layout from "../components/layout"
 import About from "../components/about"
+import Timeline from "../components/timeline"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -15,34 +16,15 @@ class BlogAbout extends React.Component {
     const { author } = data.site.siteMetadata
     const siteTitle = data.site.siteMetadata.title
 
+    const portrait = <Avatar
+      fixed={data.avatar.childImageSharp.fixed}
+      alt={author}
+    />
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="About" />
-        <div
-          style={{
-            display: `flex`,
-            flexWrap: 'wrap',
-            margin: 'auto',
-            marginBottom: rhythm(2.5),
-          }}
-        >
-          <Image
-            fixed={data.avatar.childImageSharp.fixed}
-            alt={author}
-            style={{
-              margin: 'auto',
-              marginBottom: rhythm(1),
-              minWidth: '15vh',
-              maxHeight: '15vh',
-              flex: '0 0 150px',
-              borderRadius: `5px`,
-            }}
-            imgStyle={{
-              borderRadius: `5px`,
-            }}
-          />
-        </div>
-        <About />
+        <About image={portrait}/>
+        <Timeline />
       </Layout>
     )
   }
@@ -63,7 +45,7 @@ export const pageQuery = graphql`
     }
     avatar: file(absolutePath: { regex: "/me.jpg/" }) {
       childImageSharp {
-        fixed(width: 250, height: 250) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }

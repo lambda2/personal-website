@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { injectIntl, Link } from "gatsby-plugin-intl"
+import { Avatar } from "../elements/avatar"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,10 +18,15 @@ class BlogIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges.filter(({ node }) => node.frontmatter.lang === intl.locale)
     
+    const portrait = <Avatar
+      fixed={data.avatar.childImageSharp.fixed}
+      alt={data.author}
+    />
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={intl.formatMessage({ id: 'home' })} />
-        <About />
+        <About image={portrait}/>
         {posts.length === 0 && <p>
           <FontAwesomeIcon icon={faEmptySet} />{' '}
           {intl.formatMessage({id: 'no-posts'})}
@@ -63,6 +69,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    avatar: file(absolutePath: { regex: "/me.jpg/" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

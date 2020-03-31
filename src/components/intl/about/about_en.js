@@ -20,7 +20,7 @@ const BioContent = ({ intl }) => {
     ...linkAttr
   }
 
-  return (<>
+  return (<div>
     <p>
       <span role="img" aria-label="wave">👋 </span>
       Hey, I'm André Aubin. ex-developper@<a {...hLinkAttr} href="https://42.fr">42</a>. CTO@<a {...hLinkAttr} href="https://pandascore.co">PandaScore</a>.
@@ -29,7 +29,7 @@ const BioContent = ({ intl }) => {
       You can reach me on <img style={logoStyle} src="https://keybase.io/images/icons/icon-keybase-logo-48@2x.png" alt="keybase logo" /> <a {...linkAttr} href="https://keybase.io/lambda2">Keybase</a>, get my <a {...linkAttr} href="https://keybase.io/lambda2/pgp_keys.asc">PGP key</a> or see my work on 
       {' '}<img style={logoStyle} src="https://github.githubassets.com/pinned-octocat.svg" alt="github-logo" /> <a {...linkAttr} href="https://github.com/lambda2">Github</a>.
     </p>
-  </>)
+  </div>)
 }
 
 export default injectIntl(BioContent)

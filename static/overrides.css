@@ -1,0 +1,17 @@
+.gatsby-highlight > pre {
+  font-size: 0.8rem
+}
+
+.gatsby-highlight-code-line {
+  background-color: #424242;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #EF6461;
+}
+
+.gatsby-highlight {
+  background-color: #1b1b1b;
+}

@@ -46,10 +46,12 @@ module.exports = {
               providers: {
                 include: [
                   'Twitter',
+                  'CodeSandbox'
                 ],
                 settings: {
                   // Ex. Show all Twitter embeds with the dark theme
                   Twitter: { theme: 'light' },
+                  CodeSandbox: { autoresize: 0, fontsize: 12, hidenavigation: 1, theme: 'light' },
                 },
               },
             }

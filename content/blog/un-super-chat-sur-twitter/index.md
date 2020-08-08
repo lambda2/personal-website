@@ -1,8 +1,8 @@
 ---
 title: Un super chat sur Twitter
-date: 2016-06-23T19:30:00.000Z
+date: 2015-06-23T19:30:00.000Z
 lang: fr
-description: "L'idée de base est relativement simple: créer un nouveau compte Twitter, et faire un programme qui va — périodiquement — retweeter, liker et suivre des personnes. 
+description: "L'idée de base est relativement simple: créer un nouveau compte Twitter, et faire un programme qui va — périodiquement — retweeter, liker et suivre des personnes.
 Parce que un robot, c'est beaucoup plus patient que moi."
 ---
 
@@ -46,7 +46,7 @@ Premièrement, Jacques n'a jamais rien posté, et personne n'a envie de suivre u
 Ensuite, je n'ai pas joué avec les limites de twitter: 1000 abonnements par jours, 5000 abonnements maximum.
 Enfin, personne n'aimait Jacques, il n'a eu aucun ami. C'est un fait.
 
-Je repars donc sur de bonnes bases, et je fais plusieurs modifications sur le programme du robot. 
+Je repars donc sur de bonnes bases, et je fais plusieurs modifications sur le programme du robot.
 À partir de maintenant, il va suivre un compte de référence, et retweeter chaque jour le tweet qui a eu le plus de succès (on s'assure ainsi que le contenu est bon). On va aussi se donner la peine de planifier quelques tweets au début, pour donner au compte un petit coup de pouce, et l'aider à décoller.
 Il faut également qu'il se souvienne de toutes les personnes qu'il a suivies, et ne pas dépasser une limite de 3000 personnes, au bout de laquelle il va commencer à lâchement se désabonner des personnes qui ne l'ont pas suivies.
 Enfin, il faut un compte qui plaise à tout le monde. Tout le monde aime les chats, et tout le monde aime les super héros. Ca sera donc un chat super héros (maintenant, avec le recul, c'était d'une évidence frappante).

@@ -28,6 +28,7 @@ const ProjectItem = styled.li`
 
   main {
     flex: 1 1 300px;
+    padding-bottom: ${rhythm(.5)};
     // margin: 0 ${rhythm(.5)};
   }
 
@@ -40,7 +41,8 @@ const ProjectItem = styled.li`
 
 const MainTitle = styled.h1`
   display: block;
-  text-align: center;
+  text-align: left;
+  font-size: ${rhythm(.7)};
 `
 
 const ProjectTitle = styled.aside`
@@ -125,23 +127,23 @@ const Timeline = ({ intl }) => {
   }
 
   return (<div>
+    <p>{intl.formatMessage({ id: 'about-me.function' })}</p>
     <p>
       {intl.formatMessage({ id: 'about-me.hobbies' }, {
         a: (text) => <ExternalLink href="https://github.com/lambda2">{text}</ExternalLink>,
         b: (text) => <ExternalLink href="https://twitter.com/lambda_2">{text}</ExternalLink>,
       })}.
-            {/* Vous pouvez me contacter via <img style={logoStyle} src="https://keybase.io/images/icons/icon-keybase-logo-48@2x.png" alt="keybase logo" /> <a {...linkAttr} href="https://keybase.io/lambda2">Keybase</a>, récupérer ma <a {...linkAttr} href="https://keybase.io/lambda2/pgp_keys.asc">clé PGP</a> ou voir ce que je fais sur <img style={logoStyle} src="https://github.githubassets.com/pinned-octocat.svg" alt="github-logo" /> <a {...linkAttr} href="https://github.com/lambda2">Github</a>. */}
     </p>
+    <p>{intl.formatMessage({ id: 'experiences.now' }, {
+      a: (text) => <ExternalLink href="https://trefle.io">{text}</ExternalLink>
+    })}</p>
+
     <MainTitle>{intl.formatMessage({ id: 'experiences.title' })}</MainTitle>
     <ProjectList>
 
       <ProjectItem>
         <ProjectTitle>
           <h2 style={{ fontFamily: 'Inconsolata', color: "#000" }}><span style={{ color: "#b300de"}}>Panda</span>Score</h2>
-          <ul>
-            <li><span><FontAwesomeIcon icon={faMapMarkerAlt} />{' '}Paris, France</span></li>
-            <li><FontAwesomeIcon icon={faExternalLinkAlt} />{' '}<a {...hLinkAttr} href="https://pandascore.co">pandascore.co</a></li>
-          </ul>
         </ProjectTitle>
         <main>
           <b>{intl.formatMessage({ id: 'experiences.panda.title' })}</b>
@@ -152,10 +154,6 @@ const Timeline = ({ intl }) => {
       <ProjectItem>
         <ProjectTitle>
           <h2 style={{ color: "#000" }}>42</h2>
-          <ul>
-            <li><span><FontAwesomeIcon icon={faMapMarkerAlt} />{' '}Paris, France</span></li>
-            <li><FontAwesomeIcon icon={faExternalLinkAlt} />{' '}<a {...hLinkAttr} href="https://42.fr">42.fr</a></li>
-          </ul>
         </ProjectTitle>
         <main>
           <b>{intl.formatMessage({ id: 'experiences.42.title' })}</b>
@@ -168,9 +166,10 @@ const Timeline = ({ intl }) => {
       </ProjectItem>
 
     </ProjectList>
+    {/**
     <MainTitle>{intl.formatMessage({ id: 'projects.title' })}</MainTitle>
-    <ProjectList>
 
+    <ProjectList>
       <ProjectItem>
         <ProjectTitle>
           <h2 style={{ fontFamily: 'Inconsolata', color: '#318810' }}>
@@ -227,6 +226,7 @@ const Timeline = ({ intl }) => {
 
 
     </ProjectList>
+    */}
   </div>)
 }
 

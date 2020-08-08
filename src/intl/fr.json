@@ -12,13 +12,13 @@
   "in-pause": "En pause",
 
   "about-me": {
-    "headline": "Bonjour, je suis André Aubin.",
-    "function": "Je suis développeur (plutôt web), et en ce moment je \"travaille\" à mon compte.",
-    "hobbies": "Je passe beaucoup de temps à <a>bricoler des petits projets</a> qui peuvent servir. Si vous avez des questions, des idées ou que vous voulez juste papoter, n'hésitez pas à m'écrire sur <b>Twitter</b>"
+    "headline": "Bonjour, je suis André !",
+    "function": "Je suis développeur, principalement sur de l'open-source maintenant, et je vis actuellement sur Lyon.",
+    "hobbies": "Je passe beaucoup de temps à <a>bricoler des petits projets</a> utiles (ou non), et à contributer à d'autres. Si vous avez des questions, des idées ou que vous voulez juste papoter, n'hésitez pas à m'écrire sur <b>Twitter</b>"
   },
-
   "experiences": {
-    "title": "Dernières expériences",
+    "title": "Avant",
+    "now": "En ce moment je construis <a>Trefle</a>, une API des plantes.",
     "panda": {
       "title": "Directeur technique & Développeur",
       "desc": "Développement de la plateforme & management des équipes techniques."

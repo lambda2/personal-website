@@ -13,8 +13,8 @@ const BioContent = ({ intl, image }) => {
     margin-bottom: ${rhythm(0)};
 
     & > content {
-      padding-left: ${rhythm(1)};
-      flex: 1 0 250px;
+      /* padding-left: ${rhythm(1)};
+      flex: 1 0 250px; */
     }
 
     ${MOBILE_MEDIA_QUERY} {
@@ -27,14 +27,12 @@ const BioContent = ({ intl, image }) => {
 
   return (
     <MainContent>
-      {image}
+      {/** {image} */}
       <content>
         <div>
           <p>
             <span role="img" aria-label="wave">👋 </span>
             <b>{intl.formatMessage({ id: 'about-me.headline' })}</b>
-            <br/>
-            {intl.formatMessage({ id: 'about-me.function' })}
           </p>
         </div>
       </content>

@@ -19,10 +19,10 @@ class Header extends React.Component {
           <FontAwesomeIcon icon={faToriiGate} />{' '}
           {intl.formatMessage({ id: 'home' })}
         </NavLink>
-        <NavLink to={`/about`} >
+        {/* <NavLink to={`/about`} >
           <FontAwesomeIcon icon={faPortrait} />{' '}
           {intl.formatMessage({ id: 'about' })}
-        </NavLink>
+        </NavLink> */}
         <NavButton onClick={onChangeLocale} href="#"  // eslint-disable-line 
         >
           <FontAwesomeIcon icon={faFlag} />{' '}

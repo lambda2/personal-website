@@ -13,13 +13,12 @@
 
   "about-me": {
     "headline": "Hello, I'm André !",
-    "function": "I'm a software developer, mostly on open-source now, and I'm currently living in Lyon.",
+    "function": "I'm a software developer at <a>Futura Gaïa</a>, and I'm currently living in Lyon.",
     "hobbies": "I spend a lot of time <a>building small projects</a> that can be useful (or not). If you have any questions, ideas or just want to talk, write me on <b>Twitter</b>"
   },
 
   "experiences": {
     "title": "Before",
-    "now": "I'm currently working on <a>Trefle</a>, an open and free botanical API.",
     "panda": {
       "title": "CTO & Developer",
       "desc": "Software development & technical team management."

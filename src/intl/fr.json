@@ -13,12 +13,11 @@
 
   "about-me": {
     "headline": "Bonjour, je suis André !",
-    "function": "Je suis développeur, principalement sur de l'open-source maintenant, et je vis actuellement sur Lyon.",
+    "function": "Je suis développeur à <a>Futura Gaïa</a>, et je vis actuellement sur Lyon.",
     "hobbies": "Je passe beaucoup de temps à <a>bricoler des petits projets</a> utiles (ou non), et à contributer à d'autres. Si vous avez des questions, des idées ou que vous voulez juste papoter, n'hésitez pas à m'écrire sur <b>Twitter</b>"
   },
   "experiences": {
     "title": "Avant",
-    "now": "En ce moment je construis <a>Trefle</a>, une API des plantes.",
     "panda": {
       "title": "Directeur technique & Développeur",
       "desc": "Développement de la plateforme & management des équipes techniques."

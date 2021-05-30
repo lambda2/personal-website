@@ -38,9 +38,6 @@ const Footer = ({ intl }) => {
       {intl.formatMessage({ id: 'cc' }, { a: (text) => <a href="https://creativecommons.org/publicdomain/zero/1.0/">{text}</a>})}
     </aside>
     <nav>
-      <a {...aProps} href="https://keybase.io/lambda2">
-        <FontAwesomeIcon icon={faKeybase} />
-      </a>
       <a {...aProps} href="https://github.com/lambda2">
         <FontAwesomeIcon icon={faGithub} />
       </a>

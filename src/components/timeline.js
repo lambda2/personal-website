@@ -127,16 +127,15 @@ const Timeline = ({ intl }) => {
   }
 
   return (<div>
-    <p>{intl.formatMessage({ id: 'about-me.function' })}</p>
+    <p>{intl.formatMessage({ id: 'about-me.function' }, {
+      a: (text) => <ExternalLink href="https://futuragaia.com">{text}</ExternalLink>
+    })}</p>
     <p>
       {intl.formatMessage({ id: 'about-me.hobbies' }, {
         a: (text) => <ExternalLink href="https://github.com/lambda2">{text}</ExternalLink>,
         b: (text) => <ExternalLink href="https://twitter.com/lambda_2">{text}</ExternalLink>,
       })}.
     </p>
-    <p>{intl.formatMessage({ id: 'experiences.now' }, {
-      a: (text) => <ExternalLink href="https://trefle.io">{text}</ExternalLink>
-    })}</p>
 
     <MainTitle>{intl.formatMessage({ id: 'experiences.title' })}</MainTitle>
     <ProjectList>
@@ -166,7 +165,6 @@ const Timeline = ({ intl }) => {
       </ProjectItem>
 
     </ProjectList>
-    {/**
     <MainTitle>{intl.formatMessage({ id: 'projects.title' })}</MainTitle>
 
     <ProjectList>
@@ -177,17 +175,14 @@ const Timeline = ({ intl }) => {
             {' '}
             Trefle
           </h2>
-          <ul>
-            <li><FontAwesomeIcon icon={faCompactDisc} spin />{' '}{intl.formatMessage({ id: 'in-progress' })}</li>
-            <li><FontAwesomeIcon icon={faExternalLinkAlt} />{' '}<a {...hLinkAttr} href="https://trefle.io">trefle.io</a></li>
-          </ul>
+          <br/>
         </ProjectTitle>
         <main>
           <b>{intl.formatMessage({ id: 'projects.trefle.title' })}</b>
-          <p>{intl.formatMessage({ id: 'projects.trefle.desc' })}</p>
+          <p>{intl.formatMessage({ id: 'projects.trefle.desc' })} (<a {...hLinkAttr} href="https://github.com/treflehq/trefle-api">Github</a>)</p>
         </main>
       </ProjectItem>
-
+{/* 
       <ProjectItem>
         <ProjectTitle>
           <h2 style={{ fontFamily: 'Inconsolata', color: '#ef4565', position: 'relative' }}>
@@ -222,11 +217,11 @@ const Timeline = ({ intl }) => {
           <b>{intl.formatMessage({ id: 'projects.spire.title' })}</b>
           <p>{intl.formatMessage({ id: 'projects.spire.desc' })}</p>
         </main>
-      </ProjectItem>
+      </ProjectItem> */}
 
 
     </ProjectList>
-    */}
+   
   </div>)
 }
 

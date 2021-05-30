@@ -1,62 +1,29 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { injectIntl, Link } from "gatsby-plugin-intl"
+import { injectIntl } from "gatsby-plugin-intl"
 import { Avatar } from "../elements/avatar"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import About from "../components/about"
-
-import { rhythm } from "../utils/typography"
-
-import { faEmptySet } from '../components/icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Timeline from "../components/timeline"
+import SEO from "../components/seo"
 
 class BlogIndex extends React.Component {
   render() {
-    const { data, intl } = this.props
+
+    const { data } = this.props
+    const { author } = data.site.siteMetadata
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges.filter(({ node }) => node.frontmatter.lang === intl.locale)
-    
+
     const portrait = <Avatar
       fixed={data.avatar.childImageSharp.fixed}
-      alt={data.author}
+      alt={author}
     />
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={intl.formatMessage({ id: 'home' })} />
+        <SEO title="About" />
         <About image={portrait}/>
-        {posts.length === 0 && <p>
-          <FontAwesomeIcon icon={faEmptySet} />{' '}
-          {intl.formatMessage({id: 'no-posts'})}
-        </p>}
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+        <Timeline />
       </Layout>
     )
   }
@@ -69,28 +36,16 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author
+        social {
+          twitter
+        }
       }
     }
     avatar: file(absolutePath: { regex: "/me.jpg/" }) {
       childImageSharp {
         fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            lang
-            description
-          }
         }
       }
     }

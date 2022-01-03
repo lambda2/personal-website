@@ -75,7 +75,7 @@
     flex-direction: column-reverse;
   }
   .footer {
-    padding: 0rem 3rem;
+    padding: 0rem 3rem 1rem;
   }
   .aside {
     flex: 1 0;

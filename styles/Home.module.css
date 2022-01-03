@@ -1,0 +1,122 @@
+.container {
+  padding: 0 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  align-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-image: url(/waves.svg);
+  background-position: center 90%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  -webkit-animation: 60s linear 0s infinite alternate move_wave;
+          animation: 60s linear 0s infinite alternate move_wave;
+}
+
+@-webkit-keyframes move_wave { from { background-position: 0% 90%; } to { background-position: 50% 90%; }  }
+        @keyframes move_wave { from { background-position: 0% 90%; } to { background-position: 50% 90%; }  }
+
+.main {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.section {
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+.footer {
+  width: 100%;
+  background: #fef4f5;
+  display: flex;
+  flex: 0;
+  padding: 1rem 3rem;
+}
+.footer a {
+  color: #c13935;
+}
+
+.footerSection {
+  display: flex;
+  width: 100%;
+  max-width: 40em;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0px;
+  flex-wrap: wrap;
+}
+
+
+.aside {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex: 1 1 250px;
+}
+.aside:last-child {
+  justify-content: flex-end;
+}
+
+@media (max-width: 425px) {
+  .footerSection {
+    flex-direction: column-reverse;
+  }
+  .footer {
+    padding: 0rem 3rem;
+  }
+  .aside {
+    flex: 1 0;
+  }
+
+  .aside:last-child {
+    justify-content: center;
+    font-size: 1.5em;
+  }
+}
+
+.aside a,
+.aside li,
+.aside ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.aside ul {
+  margin: 1em 0;
+  padding: 0;
+}
+
+.aside a {
+  text-decoration: none;
+  text-shadow: none;
+  background-image: none;
+  padding: 0 0.5rem;
+  display: inline;
+}
+
+
+.title {
+  margin: 0;
+  margin-bottom: 1em;
+  line-height: 1.15;
+  font-size: 1.5rem;
+}
+
+.description {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+

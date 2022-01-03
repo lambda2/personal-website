@@ -1,0 +1,11 @@
+{
+  "title": "Andre's blog",
+  "author": "André Aubin",
+  "description": "Making stuff with internet, plants, API's and people",
+  "siteUrl": "https://andral.xyz",
+  "social": {
+    "twitter": "lambda_2",
+    "github": "lambda2",
+    "linkedin": "andreaubin"
+  }
+}

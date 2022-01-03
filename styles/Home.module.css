@@ -71,6 +71,11 @@
 }
 
 @media (max-width: 425px) {
+
+  body {
+    overflow-x: hidden;
+  }
+  
   .footerSection {
     flex-direction: column-reverse;
   }

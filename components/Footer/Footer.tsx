@@ -20,17 +20,17 @@ export const Footer = () => {
         <aside className={styles.aside}>
           <ul>
             <li>
-              <a {...aProps} href={`https://github.com/${config.social.github}`}>
+              <a {...aProps} aria-label='github' href={`https://github.com/${config.social.github}`}>
                 <FaGithubAlt />
               </a>
             </li>
             <li>
-              <a {...aProps} href={`https://bsky.app/profile/${config.social.bluesky}`}>
+              <a {...aProps} aria-label='bluesky' href={`https://bsky.app/profile/${config.social.bluesky}`}>
                 <FaBluesky />
               </a>
             </li>
             <li>
-              <a {...aProps} href={`https://www.linkedin.com/in/${config.social.linkedin}/`}>
+              <a {...aProps} aria-label='linkedin' href={`https://www.linkedin.com/in/${config.social.linkedin}/`}>
                 <FaLinkedin />
               </a>
             </li>

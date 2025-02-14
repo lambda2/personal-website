@@ -1,13 +1,3 @@
-.container {
-  padding: 0 0rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100vh;
-  align-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
 
 @-webkit-keyframes move_wave {
   from {
@@ -29,24 +19,6 @@
   }
 }
 
-.main {
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10rem 0 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.section {
-  max-width: 40em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-}
 
 .footer {
   width: 100%;
@@ -85,6 +57,7 @@
   display: flex;
   flex-direction: row;
   align-content: center;
+  align-items: center;
   flex: 1 1 250px;
 }
 

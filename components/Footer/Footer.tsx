@@ -1,11 +1,12 @@
 import React from 'react';
-import { FaGithubAlt, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithubAlt, FaBluesky, FaLinkedin, FaCreativeCommonsZero } from 'react-icons/fa6';
 import styles from './Footer.module.css'
 import config from "@/config.json"
 
 const aProps = {
   target: "_blank",
-  rel: "noopener noreferrer"
+  rel: "noopener noreferrer",
+  style: { display: 'flex', columnGap: '0.3rem' }
 }
 
 export const Footer = () => {
@@ -13,7 +14,8 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <section className={styles.footerSection}>
         <aside className={styles.aside}>
-          {(new Date()).getUTCFullYear()}, André Aubin - <a {...aProps} href="https://creativecommons.org/publicdomain/zero/1.0/">No copyright</a>
+          {(new Date()).getUTCFullYear()}, André Aubin - 
+          <a {...aProps} href="https://creativecommons.org/publicdomain/zero/1.0/"><FaCreativeCommonsZero />{' '}No copyright</a>
         </aside>
         <aside className={styles.aside}>
           <ul>
@@ -23,8 +25,8 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a {...aProps} href={`https://twitter.com/${config.social.twitter}`}>
-                <FaTwitter />
+              <a {...aProps} href={`https://bsky.app/profile/${config.social.bluesky}`}>
+                <FaBluesky />
               </a>
             </li>
             <li>

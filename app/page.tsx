@@ -1,31 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Footer } from '../components/Footer/Footer'
-import styles from '../styles/Home.module.css'
-import config from '../config.json'
+import styles from "./page.module.css";
+import { Footer } from "@/components/Footer/Footer";
 
-const aProps = {
-  target: "_blank",
-  rel: "noopener noreferrer"
-}
+export default function Home() {
 
-const Home: NextPage = () => {
+  const aProps = {
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }
+
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>{config.title}</title>
-        <meta name="description" content={config.description} />
-        <meta property={`og:title`} content={config.title} />
-        <meta property={`og:description`} content={config.description} />
-        <meta property={`og:type`} content={`website`} />
-        <meta name={`twitter:card`} content={`summary`} />
-        <meta name={`twitter:creator`} content={config.author} />
-        <meta name={`twitter:title`} content={config.title} />
-        <meta name={`twitter:description`} content={config.description} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/manifest.json" />
-      </Head>
-
       <main className={styles.main}>
         <section className={styles.section}>
 
@@ -47,7 +32,6 @@ const Home: NextPage = () => {
 
       <Footer />
     </div>
-  )
-}
 
-export default Home
+  );
+}

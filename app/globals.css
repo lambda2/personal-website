@@ -1,9 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins:wght@400;700&display=swap');
 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
 
 @media (max-width: 425px) {
@@ -54,8 +72,9 @@ p {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
 @media screen and (min-device-pixel-ratio: 1.5),
-  screen and (min-resolution: 1.5dppx) {
+screen and (min-resolution: 1.5dppx) {
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

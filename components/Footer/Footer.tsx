@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithubAlt, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import styles from '../../styles/Home.module.css'
-import config from "../../config.json"
+import styles from './Footer.module.css'
+import config from "@/config.json"
 
 const aProps = {
   target: "_blank",
